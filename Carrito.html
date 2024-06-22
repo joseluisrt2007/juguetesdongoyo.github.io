@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="José Luis Rodríguez Téllez">
+    <meta name="description" content="Página del carrito de compras">
+    <title>Juguetes Tradicionales DON GOYO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="Index.html"><img  src="imagenes/logo.jpg" alt="logo" class="izl"></a>
+        <div class="de" id="header">
+            <ul class="nav">
+                <li>
+                    <img src="imagenes/menu.jpg" alt="menu" class="de">
+                    <ul class="izqu">
+                        <li><a href="juguetes.html">Juguetes</a></li>
+                        <li><a href="Index.html">Página principal</a></li>
+                        <li><a href="Misión.html"> Misión </a></li>
+                        <li><a href="Visión.html"> Visión </a></li>
+                        <li><a href="Quienes somos.html"> ¿Quiénes somos? </a></li>
+                        <li><a href="Objetivo.html"> Objetivo </a></li>
+                        <li><a href="Comercial.html"> Comercial</a></li>
+                        <li><a href="Datos de contacto.html"> Datos de contacto </a></li>
+                    </ul>
+                </li>
+                <a href="Carrito.html"><img src="imagenes/carrito.jpg" alt="carrito" class="des"></a>
+            </ul>
+        </div>
+    </header>
+    <br><br>
+    <h1 class="centt">Carrito</h1>
+    <br><br>
+    <div id="cart" class="center"></div>
+    
+    <script>
+        function renderCart() {
+            const cartContainer = document.getElementById('cart');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            cartContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartContainer.innerHTML = '<br><br><h2 class="centt">El carrito está vacío</h2>';
+                return;
+            }
+
+            cart.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.classList.add('cart-product');
+                productElement.innerHTML = `
+                    <div class="table-container">
+                        <table border="1" class="centt tab">
+                            <tr>
+                                <td><h2>Producto:</h2></td>
+                                <td><h2 class="zul">${product.name}</h2></td>
+                            </tr>
+                            <tr>
+                                <td><h2>Precio:</h2></td>
+                                <td><h2 class="zul">$${product.price} pesos</h2></td>
+                            </tr>
+                            <tr>
+                                <td><h2>Cantidad:</h2></td>
+                                <td><h2 class="zul">${product.quantity}</h2></td>
+                            </tr>
+                            <tr>
+                                <td><h2>Subtotal:</h2></td>
+                                <td><h2 class="zul">$${product.price * product.quantity} pesos</h2></td>
+                            </tr>
+                        </table>
+                        <button class="btn-red" onclick="removeFromCart('${product.name}')">Eliminar</button>
+                    </div>
+                `;
+                cartContainer.appendChild(productElement);
+            });
+
+            const totalPrice = cart.reduce((total, product) => total + product.price * product.quantity, 0);
+            const totalPriceElement = document.createElement('div');
+            totalPriceElement.innerHTML = `
+                <div class="table-container">
+                    <br><br>
+                    <h1>Totales del carrito</h1>
+                    <br><br>
+                    <table border="1" class="centt tab2">
+                        <tr>
+                            <td><h2>Total:</h2></td>
+                            <td><h2 class="zul">$${totalPrice} pesos</h2></td>
+                        </tr>
+                    </table>
+                    <br><br><br>
+                    <div class="cen">
+                        <button class="btn-red" onclick="clearCart()">Vaciar Carrito</button>
+                        <br><br><br>
+                        <a href="pago.html" class="btncon ct-negro">Continuar con la compra</a><br><br>
+                    </div>
+                </div>
+            `;
+            cartContainer.appendChild(totalPriceElement);
+        }
+
+        function removeFromCart(productName) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(product => product.name !== productName);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            renderCart();
+        }
+
+        function clearCart() {
+            localStorage.removeItem('cart');
+            renderCart();
+        }
+
+        window.onload = renderCart;
+    </script>
+    <br><br><br>
+</body>
+</html>

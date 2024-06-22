@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Arias Saavedra Héctor Gael">
+    <meta name="description" content="Página de gracias">
+    <title>Juguetes Tradicionales DON GOYO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="Index.html"><img  src="imagenes/logo.jpg" alt="logo" class="izl"></a>
+        <div class="de" id="header">
+            <ul class="nav">
+                <li><img src="imagenes/menu.jpg" alt="menu" class="de">
+                    <ul class="izqu">
+                        <li><a href="juguetes.html">Juguetes</a></li>
+                        <li><a href="Index.html">Página principal</a></li>
+                        <li><a href="Misión.html">Misión</a></li>
+                        <li><a href="Visión.html">Visión</a></li>
+                        <li><a href="Quienes somos.html">¿Quiénes somos?</a></li>
+                        <li><a href="Objetivo.html">Objetivo</a></li>
+                        <li><a href="Comercial.html">Comercial</a></li>
+                        <li><a href="Datos de contacto.html">Datos de contacto</a></li>
+                    </ul>
+                </li>
+                <a href="Carrito.html"><img src="imagenes/carrito.jpg" alt="carrito" class="des"></a>
+            </ul>
+        </div>
+    </header>
+    <br>
+    <h1 class="cen">Pago por MasterCard</h1>
+    <div class="cen">
+        <section>
+            <form name="cuestionario" method="get" action="procesar_formulario.php" onsubmit="return handleFormSubmit(event)">
+                <br><br>
+                <label class="textpago">Nombre de la tarjeta:</label>
+                <input type="text" name="nombre" class="tamfor" required>
+                <br><br><br>
+                <label class="textpago">Número de tarjeta:</label>
+                <input type="text" name="numero" pattern="\d{16}" title="Debe contener 16 dígitos" class="tamfor" required>
+                <br><br><br>
+                <label class="textpago">Fecha de expiración:</label>
+                <input type="month" name="fecha" class="tamfor" required>
+                <br><br><br><br>
+                <label class="textpago">CVV:</label>
+                <input type="text" name="cvv" pattern="\d{3}" title="Debe contener 3 dígitos" class="tamfor" required>
+                <br><br><br><br>
+                <input type="submit" value="Confirmar pago" class="btncon">
+            </form>
+        </section>
+    </div>
+    <script>
+        function clearCart() {
+            localStorage.removeItem('cart');
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            clearCart();
+            window.location.href = 'Gracias.html';
+        }
+    </script>
+    <br><br>
+</body>
+</html>

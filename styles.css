@@ -1,0 +1,543 @@
+/* Estilo para la cabecera */
+header {
+    overflow: auto;
+    background-color: black;
+    padding: 20px;
+}
+.iz{
+    width: 150px;
+    height: 120px;
+    float: left;
+    margin-right: 40px;
+}
+.izl{
+    width: 150px;
+    height: 120px;
+    float: left;
+    margin-right: 40px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.izl:hover{
+    transform: scale(1.20); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+.des{
+    width: 150px;
+    height: 115px;
+    float: right;
+    margin-left: 40px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.des:hover{
+    transform: scale(1.20); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+.de{
+    width: 150px;
+    height: 115px;
+    float: right;
+    margin-left: 40px;
+}
+/* Estilo para el cuerpo */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('imagenes/prueba.jpg'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+main {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente para mejorar la legibilidad del texto */
+}
+/* Estilo para la tabla del menu*/
+.menu{
+width: 200px;
+height: auto;
+display: block;
+margin: 0 auto;
+}
+.centro{
+    display: flex;
+    justify-content: center;
+
+}
+table{
+    width: 100%;
+    height: 50%;
+    box-shadow: 0 0 10px rgba;
+}
+.cen{
+    width: 150;
+    height: 150;
+    text-align: center;
+}
+.izq{
+    text-align: left;
+}
+.der{
+    text-align: right;
+}
+.boton1{
+    display: inline-block;
+    font-family: Comic Sans Ms ;
+    font-size: 17px;
+    padding: 1.5em 1.5em;
+    background-color: yellow;
+    color: black;
+    width: 190px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.boton1:hover{
+    transform: scale(1.2); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+.boton2{
+    display: inline-block;
+    font-family: Comic Sans Ms ;
+    font-size: 17px;
+    padding: 1.5em 1.5em;
+    background-color: yellowgreen;
+    color: black;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.boton2:hover{
+    transform: scale(1.2); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+.boton3{
+    display: inline-block;
+    font-family: Comic Sans Ms ;
+    font-size: 17px;
+    padding: 1.5em 1.5em;
+    background-color: orange;
+    color: black;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.boton3:hover{
+    transform: scale(1.2); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+.boton4{
+    display: inline-block;
+    font-family: Comic Sans Ms ;
+    font-size: 17px;
+    padding: 1.5em 1.5em;
+    background-color: red;
+    color: black;
+    text-align: center;
+    width: 100px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.boton4:hover{
+    transform: scale(1.2); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+.boton5{
+    display: inline-block;
+    font-family: Comic Sans Ms ;
+    font-size: 17px;
+    padding: 1.5em 1.5em;
+    background-color: green;
+    color: black;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.boton5:hover{
+    transform: scale(1.2); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+.boton6{
+    display: inline-block;
+    font-family: Comic Sans Ms ;
+    font-size: 17px;
+    padding: 1.5em 1.5em;
+    background-color: rgb(51, 51, 187);
+    color: black;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 50px; /* Puedes ajustar el valor según sea necesario */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.boton6:hover{
+    transform: scale(1.2); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+.boton7{
+    display: inline-block;
+    font-family: Comic Sans Ms ;
+
+    font
+    -size: 17px;
+    padding: 1.5em 1.5em;
+    background-color: gold;
+    color: black;
+    width: 100px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 50px; /* Puedes ajustar el valor según sea necesario */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.boton7:hover{
+    transform: scale(1.2); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+/*boton de compra*/
+.btn1{
+    display: inline-block;
+    padding: .99em 2.5em;  /*tamaño de boton*/
+    border-radius: .5em;  /*esquinas rectas*/
+    cursor: pointer;
+    text-decoration: none;
+    background-color: yellow;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.btn1:hover{
+    transform: scale(1.1); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+.btn2{
+    display: inline-block;
+    padding: .75em 1.5em;
+    border-radius: .5em;
+    cursor: pointer;
+    text-decoration: none;
+    width: 55px;
+    height: 20px;
+}
+/*Tipos de texto para los productos*/
+.textpro6{
+    font-family: Comic Sans Ms ;
+    font-size: 40px;
+    margin-left: 70px;
+}
+.textpro{
+    font-family: Comic Sans Ms ;
+    font-size: 40px;
+    margin-left: 70px;
+}
+.textpro1{
+    font-family: Comic Sans Ms ;
+    font-size: 40px;
+    margin-left: 75px;
+}
+.textpro2{
+    font-family: Comic Sans Ms ;
+    font-size: 40px;
+    margin-left: 65px;
+}
+.textpro3{
+    font-family: Comic Sans Ms ;
+    font-size: 40px;
+    margin-left: 80px;
+}
+.textpro4{
+    font-family: Comic Sans Ms ;
+    font-size: 40px;
+    margin-left: 95px;
+}
+.textpro5{
+    font-family: Comic Sans Ms ;
+    font-size: 40px;
+    margin-left: 70px;
+}
+.textpro6{
+    font-family: Comic Sans Ms ;
+    font-size: 40px;
+    margin-left: 30px;
+}
+.textpre{
+    font-family: cursive;
+    font-size: 40px;
+}
+.texttext{
+    font-family: Roboto;
+    font-size: 30px;
+}
+.text{
+    font-family: Roboto;
+}
+/*video*/
+.vid{
+    width: 60%;
+    height: 60%;
+        object-fit: cover;
+
+}
+/* Estilo para menu depegable*/
+*{
+    margin:0px;
+    padding: 0px;
+}
+#header{
+    margin: auto;
+    width: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+  
+}
+ul{
+    list-style: none;
+    font-family: Comic Sans Ms ;
+    font-size: 1.10em;
+}
+.izq{
+    float:left ;
+}
+.nav > li{
+    float: right;
+
+}
+.nav li a{
+    background-color: gray;
+    color: black;
+    text-decoration: none;
+    padding: 50px 60px;
+    display: block;
+
+}
+.nav li a:hover{
+background-color: #207377;  
+}
+.nav li ul{
+    display: none;
+    position: absolute;
+    min-width: 140px;
+}
+.nav li:hover > ul{
+    display: block;
+}
+.nav li ul li{
+    position: relative;
+}
+.nav li ul li ul{
+    right: 140px;
+    top: 0px;
+}
+/* Tamaño y forma de texto*/
+.titulo{
+    font-size: 60px;
+    text-align: center;
+}
+.texto{
+    font-size: 35px;
+    text-align: center;
+}
+/*Estlos tamaños de imagenes */
+.tam1{
+    width: 250px;
+    height: 200px;
+    margin-right: 50px; /* Puedes ajustar el valor según sea necesario */
+    margin-left: 20px; /* Puedes ajustar el valor según sea necesario */
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.tam1:hover{
+    transform: scale(1.05); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+.tamre{
+    width: 160px;
+    height: 120px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.tamre:hover{
+    transform: scale(1.1); /* Escala la imagen un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra para darle profundidad */
+}
+/*Para el carrito*/
+.tm{
+  width: 150px;
+    height: 30px;  
+}
+/*CSS PARA LOS METODOS DE PAGO*/
+.oxx{
+    width: 300px;
+    height: 150px;
+        transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+
+}
+.oxx:hover{
+    transform: scale(1.2); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+.mdp{
+    font-family: cursive;
+    font-size: 50px;
+}
+.textopago{
+    font-family: cursive;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+
+}
+/**/
+.a{
+    text-decoration: none;
+    color: black;
+}
+.ida{
+    width: 50px;
+    height: 50px;
+}
+.texx{
+    font-family: cursive;
+    font-size: 23px;
+}
+
+/* css es para la pagina de juguetes*/
+
+.c{
+    text-align: center;   /*Centrar texto, color y tipo de letra*/
+    color: black;
+  font-size: 55px;
+}
+/*Tamaños de imagenes*/
+.tamañoimg{
+    width: 230px;
+    height: 190px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.tamañoimg:hover{
+    transform: scale(1.1); /* Escala la imagen un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra para darle profundidad */
+}
+/*boton*/
+.bt{
+    display: inline-block;
+    padding: .99em 2.5em;  /*tamaño de boton*/
+    border-radius: .5em;  /*esquinas rectas*/
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.bt:hover{
+    transform: scale(1.2); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+/*Color de botones*/
+.cb-azul{
+   background: blue;  
+}
+.cb-amarillo{
+   background: yellow;  
+}
+.cb-verde{
+   background: green;  
+}
+.cb-naranja{
+   background: orange;  
+}
+.cb-rosa{
+   background: hotpink;  
+}
+.cb-azulclaro{
+   background: cyan;  
+}
+.cb-morado{
+   background: blueviolet;  
+}
+.cb-rojo{
+   background: red;  
+}
+/*color del texto del botón*/
+.ct-blanco{
+    color: white;
+}
+.ct-negro{
+    color: black;
+}
+
+/*final pagina de juguetes*/
+.centt {
+    text-align: center;
+
+}
+
+.tab {
+    height: 10em;
+    width: 50em;
+}
+
+.tab2 {
+    height: 3em;
+    width: 50em;
+}
+
+/*tipo de letra para el metodo de pago*/
+.textpago{
+    font-family: Comic Sans Ms ;
+    font-size: 25px;
+}
+/**/
+.tamfor{
+    
+    height: 25px;
+}
+
+/*bton de continuar carrito*/
+.btncon{
+    display: inline-block;
+    padding: 1em 2.7em;  /*tamaño de boton*/
+    border-radius: .5em;  /*esquinas rectas*/
+    cursor: pointer;
+    text-decoration: none;
+    background-color: yellow;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+.btncon:hover{
+    transform: scale(1.3); /* Escala el botón un 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+}
+/* Centrar tablas y botón en el carrito */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.btn-red:hover {
+    background-color: darkred;
+}
+
+.zul {
+    color:blue;
+}
+
+.tt{
+      font-size: 120px;
+    text-align: center;
+        font-family: cursive;
+
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Flores Elizlade Erick">
+    <meta name="description" content="Página de trompo">
+    <title>Juguetes Tradicionales DON GOYO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="Index.html"><img  src="imagenes/logo.jpg" alt="logo" class="izl"></a>
+        <div class="de" id="header">
+            <ul class="nav">
+                <li><img src="imagenes/menu.jpg" alt="menu"class="de">
+            <ul class="izqu">
+                <li><a href="juguetes.html">Juguetes</a>
+                <li><a href="Index.html">Página principal</a>
+                <li><a href="Misión.html"> Misión </a></li>
+                <li><a href="Visión.html"> Visión </a></li>
+                <li><a href="Quienes somos.html"> ¿Quiénes somos? </a></li>
+                <li><a href="Objetivo.html"> Objetivo </a></li>
+                <li><a href="Comercial.html"> Comercial</a></li>
+                <li><a href="Datos de contacto.html"> Datos de contacto </a></li>
+                   </li>
+                         </ul>
+            </li>
+        <a href="Carrito.html"><img src="imagenes/carrito.jpg" alt="carrio"class="des "></a>
+    </header>
+    <!--En esta parte se exhibe el trompo -->
+ 
+        <br>
+        <h1 class="izq textpro5">Trompo</h1>
+        <br><br><br><br>
+
+        <img src="imagenes/trompo.jpg" class="iz tam1">
+        <h2 class="textpre">$25.00 pesos</h2> 
+        <h3 class="texttext">Descripción: Trompo tradicional hecho de madera pintado de varios colores, contiene una cuerda.</h3>
+        <br><br>
+        <div>
+        <label for="cantidad"><b>Cantidad:</b></label>
+        <input type="number" id="cantidad" name="cantidad" min="1" max="100" value="1" class="tm" step="1">
+        <button type="text" class="btn1" onclick="addToCart('Trompo', 25)">Añadir al carrito</button><br><br><br><br>
+        </div>
+        <br>
+        <br>
+   
+    <!--En esta parte se ofrecen 4 productos mas-->
+
+    <div class="cen">
+        <table >
+            <tr>
+                <td>
+                    <a href="canicas.html"><img src="imagenes/canicas.jpg" class="tamre"></a>
+                </td>
+                <td>
+                    <a href="domino.html"><img src="imagenes/domino.jpg" class="tamre"></a>
+                </td>
+                <td>
+                    <a href="yoyo.html"><img src="imagenes/yoyo.jpg" class="tamre"></a>
+                </td>
+                <td>
+                    <a href="Tamborcito.html"><img src="imagenes/tamborcito.jpg" class="tamre"></a>
+                </td>
+            </tr>
+            <tr>
+                 <td>
+                    <h3 class="text">Canicas</h3><br>
+                    <h3 class="text">$20 pesos</h3><br>
+                    <a href="canicas.html" class="bt cb-rosa  ct-blanco">Comprar</a>
+                </td>
+                <td>
+                    <h3 class="text">Domino</h3><br>
+                    <h3 class="text">$60 pesos</h3><br>
+                    <a href="domino.html" class="bt cb-azulclaro  ct-negro">Comprar</a>
+
+                </td>
+                <td>
+                    <h3 class="text">Yoyo</h3><br>
+                    <h3 class="text">$30 pesos</h3><br>
+                    <a href="yoyo.html" class="bt cb-morado  ct-blanco">Comprar</a>
+
+                </td>
+                <td>
+                    <h3 class="text">Tamborcito</h3><br>
+                    <h3 class="text">$35 pesos</h3><br>
+                     <a href="tamborcito.html" class="bt cb-rojo  ct-blanco">Comprar</a>
+                   
+                </td>
+            </tr>
+        </table>
+    </div>
+        <script>
+            document.getElementById('cantidad').addEventListener('input', function (event) {
+            const value = event.target.value;
+            if (value < 1) {
+                event.target.value = 1;
+            }
+            if (value > 100) {
+                event.target.value = 100;
+            }
+            if (value.includes('.')) {
+                event.target.value = Math.floor(value);
+            }
+        });
+
+        function addToCart(productName, productPrice) {
+            const quantity = parseInt(document.getElementById('cantidad').value, 10);
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const existingProductIndex = cart.findIndex(item => item.name === productName);
+
+            if (existingProductIndex > -1) {
+                cart[existingProductIndex].quantity += quantity;
+            } else {
+                const cartItem = {
+                    name: productName,
+                    price: productPrice,
+                    quantity: quantity
+                };
+                cart.push(cartItem);
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert('Producto agregado al carrito');
+        }
+    </script>
+    <br>
+    <br>
+  
+
+
+</body>
+</html>
